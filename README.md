@@ -74,7 +74,7 @@
 
 **cheapBuy Extension** provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites to extension. It takes lot of time to search for the same product in different websites, and find the cheapest one, instead just add our extension **cheapBuy** and it will automatically fetch you price of the same product from different websites and you can directly compare the prices from different websites through our extension. In sum, **cheapBuy** is an one stop solution to buy the cheapest product online.
 <h2 align="center">
- <img src= "https://github.com/freakleesin/cheapBuy.git" width="500"/>
+ <img src= "https://github.com/anshulp2912/cheapBuy/blob/main/media/Drake_BF_meme.gif" width="500"/>
 </h2>
 
 ## 🧐 Features <a name="Features"></a>
@@ -90,7 +90,7 @@ The project is deployed on Streamlit cloud:
 
 1. Clone the github repository at the preferable location in your local machine. You will need git to be preinstalled in the system. Once the repository is cloned in your system, with the help of cd command ,
 ```
-git clone https://github.com/anshulp2912/cheapBuy.git
+git clone https://github.com/freakleesin/cheapBuy.git
 cd cheapBuy
 ```
 2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of the requirements.
