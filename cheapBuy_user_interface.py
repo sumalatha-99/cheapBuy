@@ -12,7 +12,7 @@ import streamlit as st
 import os
 from source.web_scrappers.WebScrapper import WebScrapper
 import pandas as pd
-from link_button import link_button
+#from link_button import link_button
 
 
 # Hide Footer in Streamlit
@@ -69,7 +69,8 @@ if url:
         min_value = min(price)
         min_idx = [i for i, x in enumerate(price) if x == min_value]
         for minimum_i in min_idx:
-            link_button(site[minimum_i], url[minimum_i])
+            st.button(site[minimum_i])
+#            link_button(site[minimum_i], url[minimum_i])
         
     else:
         st.error('Sorry!, there is no other website with same product')
