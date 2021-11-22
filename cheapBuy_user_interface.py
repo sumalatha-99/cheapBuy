@@ -12,6 +12,7 @@ import streamlit as st
 import os
 from source.web_scrappers.WebScrapper import WebScrapper
 import pandas as pd
+import webbrowser
 #from link_button import link_button
 
 title = '<p style="font-family:sans-serif; color:Orange; font-size: 42px;">CheapBuy</p>'
@@ -93,8 +94,14 @@ if url:
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>Visit the Website</h1>", unsafe_allow_html=True)
         min_value = min(price)
         min_idx = [i for i, x in enumerate(price) if x == min_value]
+
         for minimum_i in min_idx:
-            st.button(site[minimum_i])
+
+            link = url[minimum_i]
+            if st.button(site[minimum_i]):
+                # link a button to the new page.
+                webbrowser.open_new_tab(url[minimum_i])
+
     #            link_button(site[minimum_i], url[minimum_i])
 
     elif not description or not url or not price or not site:
