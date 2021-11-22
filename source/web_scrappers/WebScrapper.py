@@ -10,6 +10,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from source.web_scrappers.FetchDescription import FetchDescription
 from source.web_scrappers.WebScrapper_Amazon import WebScrapper_Amazon
+from source.web_scrappers.WebScrapper_Bestbuy import WebScrapper_Bestbuy
 from source.web_scrappers.WebScrapper_Bjs import WebScrapper_Bjs
 from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
 from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
@@ -69,6 +70,10 @@ class WebScrapper:
             source= 'bjs'
             fd = FetchDescription(self.product_link)
             description = fd.fetch_desc_bjs()
+        elif 'bestbuy' in self.product_link:
+            source = 'bestbuy'
+            fd = FetchDescription(self.product_link)
+            description = fd.fetch_desc_bestbuy()
         else:
             source = 'N/A'
         if source != 'N/A':
@@ -92,6 +97,8 @@ class WebScrapper:
         t_bjs = WebScrapper_Bjs(product_description)
         #Initialize thread for costco scrapper
         t_costco = WebScrapper_Costco(product_description)
+
+        t_bestbuy = WebScrapper_Bestbuy(product_description)
         
         #Start thread for amazon
         t_amazon.start()
@@ -103,6 +110,8 @@ class WebScrapper:
         t_bjs.start()
         #Start thread for costco
         t_costco.start()
+
+        t_bestbuy.start()
         
         #Join thread for amazon
         t_amazon.join()
@@ -114,6 +123,8 @@ class WebScrapper:
         t_bjs.join()
         #Join thread for costco
         t_costco.join()
+
+        t_bestbuy.join()
         
         #Get results from the amazon thread
         results_amazon = t_amazon.result
@@ -125,8 +136,10 @@ class WebScrapper:
         results_bjs = t_bjs.result
         #Get results from the costco thread
         results_costco = t_costco.result
+
+        results_bestbuy = t_bestbuy.result
         
-        return [results_amazon, results_walmart, results_ebay, results_bjs, results_costco]
+        return [results_amazon, results_walmart, results_ebay, results_bjs, results_costco, results_bestbuy]
 
 #link = 'https://www.walmart.com/ip/Brita-Longlast-Water-Filter-Replacement-Reduces-Lead-2-Count/128876038'
 #link = 'https://www.walmart.com/ip/Brita-Longlast-Water-Filter-Replacement-Reduces-Lead-2-Count/128876038'

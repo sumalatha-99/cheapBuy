@@ -129,6 +129,32 @@ class FetchDescription():
         except:
             description=''
         return description
+
+    def fetch_desc_bestbuy(self):
+        """ 
+        Fetch description from Bestbuy
+        """
+        description = ''
+        s = []
+        
+        try:
+        	#Extract description from URL for bjs
+            
+            link = self.product_link.replace("https://www.bestbuy.com/site/","")
+            link_seperation = link.split('/') # the 1st value in the link is the description
+            if link_seperation[0]:
+                _str = str(link_seperation[0])
+                des = _str.split('-')
+        
+            for i, d in enumerate(des):
+                s.append(d)
+                if i != len(des)-1: s.append(' ')
+
+            description = ''.join(s)
+            
+        except:
+            description=''
+        return description
     
     
     

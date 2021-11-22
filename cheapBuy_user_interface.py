@@ -19,7 +19,7 @@ title = '<p style="font-family:sans-serif; color:Orange; font-size: 42px;">Cheap
 #st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
 st.sidebar.title("Choose the site where you want to find the cheapest product here:")
-sites = st.sidebar.selectbox("Which site?", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco"))
+sites = st.sidebar.selectbox("Which site?", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
 
 st.header("Search Product in " + sites)
 
@@ -105,7 +105,7 @@ if url:
     #            link_button(site[minimum_i], url[minimum_i])
 
     elif not description or not url or not price or not site:
-        st.error('Sorry, there is no same product in your selected website.')
+        st.error('Sorry, there is no same product on your selected website.')
     else:
         st.error('Sorry, there is no other website with same product.')
         
@@ -135,9 +135,14 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/anshulp2912/cheapBuy" target="_blank">cheapBuy</a></p>
-<p><a style='display: block; text-align: center;' href="https://github.com/anshulp2912/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 Anshul Patel</a></p>
-<p>Contributors: Anshul, Bhavya, Darshan, Pragna, Rohan</p>
+<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">cheapBuy</a></p>
+<p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
+<p>Contributors: 
+<a href="https://github.com/Mahaoqu" target="_blank">Haoqu</a>, 
+<a href="https://github.com/joshlin5" target="_blank">Joshua</a>, 
+<a href="https://github.com/zhijin44 target="_blank">Zhijin</a>, 
+<a href="https://github.com/SamuelVivivi" target="_blank">Guanyu</a>, 
+<a href="https://github.com/freakleesin" target="_blank">Rundi</a>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
