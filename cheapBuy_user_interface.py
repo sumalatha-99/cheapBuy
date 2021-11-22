@@ -14,6 +14,14 @@ from source.web_scrappers.WebScrapper import WebScrapper
 import pandas as pd
 #from link_button import link_button
 
+title = '<p style="font-family:sans-serif; color:Orange; font-size: 42px;">CheapBuy</p>'
+#st.title("CheapBuy")
+st.markdown(title, unsafe_allow_html=True)
+st.sidebar.title("Choose the site where you want to find the cheapest product here:")
+sites = st.sidebar.selectbox("Which site?", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco"))
+
+st.header("Search Product in " + sites)
+
 
 # Hide Footer in Streamlit
 hide_menu_style = """
@@ -31,23 +39,40 @@ st.image("media/cheapBuy_Banner.gif")
 st.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
 url = st.text_input('Enter the product website link')
 
+
 # Pass url to method
 if url:
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper()
 
     # Use st.columns based on return values
-    description = []
-    url = []
-    price = []
-    site = []
+    description, url, price, site = [], [], [], []
     
-    for result in results:
-        if result!={}:
-            description.append(result['description'])
-            url.append(result['url'])
-            price.append(float(result['price'].strip('$').rstrip('0')))
-            site.append(result['site'])
+    if sites == "All Sites":
+        for result in results:
+            if result!={}:
+                description.append(result['description'])
+                url.append(result['url'])
+                price.append(float(result['price'].strip('$').rstrip('0')))
+                site.append(result['site'])
+
+    else:
+        #if sites not in site: 
+            #st.error('Sorry, there is no same product in your selected website.')
+            
+        #else:
+        for result in results:
+            if result != {}:
+                #print(result['site'])
+                if result['site'].strip() == sites:
+                    print("1")
+                    description.append(result['description'])
+                    url.append(result['url'])
+                    price.append(float(result['price'].strip('$').rstrip('0')))
+                    site.append(result['site'])
+    
+    
+
         
     if len(price):
         
@@ -70,12 +95,13 @@ if url:
         min_idx = [i for i, x in enumerate(price) if x == min_value]
         for minimum_i in min_idx:
             st.button(site[minimum_i])
-#            link_button(site[minimum_i], url[minimum_i])
-        
-    else:
-        st.error('Sorry!, there is no other website with same product')
-        
+    #            link_button(site[minimum_i], url[minimum_i])
 
+    elif not description or not url or not price or not site:
+        st.error('Sorry, there is no same product in your selected website.')
+    else:
+        st.error('Sorry, there is no other website with same product.')
+        
 
 # Add footer to UI
 footer="""<style>
