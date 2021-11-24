@@ -48,10 +48,11 @@ class WebScrapper_Bjs(Thread):
         """
         #Initialize class variables
         self.driver = self.get_driver()
-        if len(description)<5:
-            self.description = description
-        else:
-            self.description = ' '.join(description.split()[:5])
+        if description:
+            if len(description)<5:
+                self.description = description
+            else:
+                self.description = ' '.join(description.split()[:5])
         self.result = {}
         super(WebScrapper_Bjs,self).__init__()
     

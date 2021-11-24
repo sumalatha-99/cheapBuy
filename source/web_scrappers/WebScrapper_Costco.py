@@ -45,10 +45,11 @@ class WebScrapper_Costco(Thread):
             description of the product
         """
         self.driver = self.get_driver()
-        if len(description)<5:
-            self.description = description
-        else:
-            self.description = ' '.join(description.split()[:5])
+        if description:
+            if len(description)<5:
+                self.description = description
+            else:
+                self.description = ' '.join(description.split()[:5])
         self.result = {}
         super(WebScrapper_Costco,self).__init__()
        

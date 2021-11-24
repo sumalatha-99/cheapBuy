@@ -18,11 +18,11 @@ import webbrowser
 title = '<p style="font-family:sans-serif; color:Orange; font-size: 42px;">CheapBuy</p>'
 #st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
-st.sidebar.title("Choose the site where you want to find the cheapest product here:")
-sites = st.sidebar.selectbox("Which site?", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
+st.sidebar.title("Customize Options Here:")
+sites = st.sidebar.selectbox("Select the website:", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
 
+price_range = st.sidebar.selectbox("Select the price range:", ("search all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
 st.header("Search Product in " + sites)
-
 
 # Hide Footer in Streamlit
 hide_menu_style = """
@@ -33,13 +33,25 @@ hide_menu_style = """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 
-
 # Display Image
 st.image("media/cheapBuy_Banner.gif")
 
 st.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
 url = st.text_input('Enter the product website link')
 
+
+def price_filter(price_range):
+    #price_min, price_max = 0.0, 0.0
+    if price_range == "Under $50": price_min, price_max = 0.0, 49.99
+    elif price_range == "[$50, $100)": price_min, price_max = 50.0, 99.99
+    elif price_range == "[$100, $150)": price_min, price_max = 100.0, 149.99
+    elif price_range == "[$150, $200)": price_min, price_max = 150.0, 199.99
+    elif price_range == "$200 & Above": price_min, price_max = 200.0, float('inf')
+    else: 
+        price_min, price_max = 0.0, float('inf')
+    return price_min, price_max
+
+price_min, price_max = price_filter(price_range)
 
 # Pass url to method
 if url:
@@ -51,7 +63,8 @@ if url:
     
     if sites == "All Sites":
         for result in results:
-            if result!={}:
+            # add results that only fit to selected price range :
+            if result!={} and (price_min <= int(float(result['price'][1:])) <= price_max):
                 description.append(result['description'])
                 url.append(result['url'])
                 price.append(float(result['price'].strip('$').rstrip('0')))
@@ -63,7 +76,8 @@ if url:
             
         #else:
         for result in results:
-            if result != {}:
+            # add results that only fit to selected price range :
+            if result != {} and (price_min <= int(float(result['price'][1:])) <= price_max):
                 #print(result['site'])
                 if result['site'].strip() == sites:
                     print("1")
@@ -105,10 +119,11 @@ if url:
     #            link_button(site[minimum_i], url[minimum_i])
 
     elif not description or not url or not price or not site:
-        st.error('Sorry, there is no same product on your selected website.')
+        st.error('Sorry, there is no product on your selected options.')
     else:
         st.error('Sorry, there is no other website with same product.')
         
+
 
 # Add footer to UI
 footer="""<style>
@@ -129,13 +144,13 @@ position: fixed;
 left: 0;
 bottom: 0%;
 width: 100%;
-background-color: #DFFFFA;
+background-color: #CCCCFF;
 color: black;
 text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">cheapBuy</a></p>
+<p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">Developed with ❤ by cheapBuy</a></p>
 <p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
 <p>Contributors: 
 <a href="https://github.com/Mahaoqu" target="_blank">Haoqu</a>, 
@@ -145,5 +160,6 @@ text-align: center;
 <a href="https://github.com/freakleesin" target="_blank">Rundi</a>
 </div>
 """
+
 st.markdown(footer,unsafe_allow_html=True)
 
