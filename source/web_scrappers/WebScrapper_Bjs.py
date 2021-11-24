@@ -81,8 +81,8 @@ class WebScrapper_Bjs(Thread):
                 self.result['price'] = item.find("div",{"class":"display-price"}).find('span',{'class':'price'}).text
                 #Assign the site as bjs to result
                 self.result['site'] = 'bjs'
-        except:
-            print('BJs_results exception')
+        except Exception as e:
+            print('BJs_results exception', e)
             self.result={}
             
     def get_driver(self):
