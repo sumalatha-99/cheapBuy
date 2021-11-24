@@ -79,8 +79,8 @@ class WebScrapper_Bestbuy(Thread):
                 self.result['price'] = price_parent.find('span', 'a-offscreen').text
                 #Assign the site as bestbuy to result
                 self.result['site'] = 'bestbuy'
-        except:
-            print('Bestbuy_results exception')
+        except Exception as e:
+            print('Bestbuy_results exception', e)
             self.result={}
 
     def get_driver(self):

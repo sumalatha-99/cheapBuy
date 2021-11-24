@@ -78,8 +78,8 @@ class WebScrapper_Ebay(Thread):
                 self.result['price'] = item.find("span",{"class":"s-item__price"}).get_text().strip()
                 #Assign the site as ebay to result
                 self.result['site'] = 'ebay'
-        except:
-            print('Ebay_results exception')
+        except Exception as e:
+            print('Ebay_results exception', e)
             self.result = {}
         
     def get_driver(self):

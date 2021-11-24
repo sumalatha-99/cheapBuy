@@ -79,8 +79,8 @@ class WebScrapper_Walmart(Thread):
                 self.result['price'] = parent_price.find("div", {"class":"b black f5 mr1 mr2-xl lh-copy f4-l"}).text
                 #Assign the site as walmart to result
                 self.result['site'] = 'walmart'
-        except:
-            print('Walmart_results exception')
+        except Exception as e:
+            print('Walmart_results exception', e)
             self.result = {}
              
     def get_driver(self):

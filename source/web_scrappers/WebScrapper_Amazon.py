@@ -79,8 +79,8 @@ class WebScrapper_Amazon(Thread):
                 self.result['price'] = price_parent.find('span', 'a-offscreen').text
                 #Assign the site as amazon to result
                 self.result['site'] = 'amazon'
-        except:
-            print('Amazon_results exception')
+        except Exception as e:
+            print('Amazon_results exception', e)
             self.result={}
 
     def get_driver(self):
