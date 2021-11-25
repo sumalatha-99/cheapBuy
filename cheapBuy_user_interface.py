@@ -57,6 +57,7 @@ price_min, price_max = price_filter(price_range)
 if url:
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper()
+    print(results)
 
     # Use st.columns based on return values
     description, url, price, site = [], [], [], []
@@ -64,7 +65,7 @@ if url:
     if sites == "All Sites":
         for result in results:
             # add results that only fit to selected price range :
-            if result!={} and (price_min <= int(float(result['price'][1:])) <= price_max):
+            if result!={} and (price_min <= float(result['price'][1:]) <= price_max):
                 description.append(result['description'])
                 url.append(result['url'])
                 price.append(float(result['price'].strip('$').rstrip('0')))
@@ -77,18 +78,15 @@ if url:
         #else:
         for result in results:
             # add results that only fit to selected price range :
-            if result != {} and (price_min <= int(float(result['price'][1:])) <= price_max):
+            if result != {} and (price_min <= float(result['price'][1:]) <= price_max):
                 #print(result['site'])
                 if result['site'].strip() == sites:
-                    print("1")
                     description.append(result['description'])
                     url.append(result['url'])
                     price.append(float(result['price'].strip('$').rstrip('0')))
                     site.append(result['site'])
     
     
-
-        
     if len(price):
         
         def highlight_row(dataframe):
@@ -106,16 +104,15 @@ if url:
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>RESULT</h1>", unsafe_allow_html=True)
         st.dataframe(dataframe.style.apply(highlight_row, axis=None))
         st.markdown("<h1 style='text-align: center; color: #1DC5A9;'>Visit the Website</h1>", unsafe_allow_html=True)
-        min_value = min(price)
-        min_idx = [i for i, x in enumerate(price) if x == min_value]
 
-        for minimum_i in min_idx:
-
-            link = url[minimum_i]
-            if st.button(site[minimum_i]):
-                # link a button to the new page.
-                webbrowser.open_new_tab(url[minimum_i])
-
+        for s,u,p in zip(site,url,price):
+            if p == min(price):
+                if st.button(s+'  (Lowest)'):
+                    webbrowser.open_new_tab(u)
+            else:
+                if st.button(s):
+                    webbrowser.open_new_tab(u)
+            
     #            link_button(site[minimum_i], url[minimum_i])
 
     elif not description or not url or not price or not site:

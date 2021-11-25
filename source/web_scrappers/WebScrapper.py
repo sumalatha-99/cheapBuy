@@ -70,10 +70,12 @@ class WebScrapper:
             source= 'bjs'
             fd = FetchDescription(self.product_link)
             description = fd.fetch_desc_bjs()
+        
         elif 'bestbuy' in self.product_link:
             source = 'bestbuy'
             fd = FetchDescription(self.product_link)
             description = fd.fetch_desc_bestbuy()
+        
         else:
             source = 'N/A'
         if source != 'N/A':
