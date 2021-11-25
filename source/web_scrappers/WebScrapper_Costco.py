@@ -71,8 +71,8 @@ class WebScrapper_Costco(Thread):
                 self.result['url'] = shorten_url(self.result['url'])
                 self.result['price'] = item.find("div",{"class":"price"}).text.strip()
                 self.result['site'] = 'costco'
-        except:
-            print('Costco_results exception')
+        except Exception as e:
+            print('Costco_results exception', e)
             self.result={}
             
     def get_driver(self):
