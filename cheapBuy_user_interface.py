@@ -13,16 +13,23 @@ import os
 from source.web_scrappers.WebScrapper import WebScrapper
 import pandas as pd
 import webbrowser
-#from link_button import link_button
 
-title = '<p style="font-family:sans-serif; color:Orange; font-size: 42px;">CheapBuy</p>'
+title = '<p style="font-family:Bradley Hand, cursive; color:Blue; font-size: 52px;">cheapBuy</p>'
 #st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
+#st.image("media/saveMoney2.gif")
+url_sidebar = st.sidebar.text_input('Quick Action: Open a new page')
+
+#st.sidebar.image("media/cheapBuy_Banner.gif")
+st.sidebar.image("media/saveMoney2.gif")
 st.sidebar.title("Customize Options Here:")
 sites = st.sidebar.selectbox("Select the website:", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
 
 price_range = st.sidebar.selectbox("Select the price range:", ("search all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
 st.header("Search Product in " + sites)
+
+
+if url_sidebar: webbrowser.open(url_sidebar)
 
 # Hide Footer in Streamlit
 hide_menu_style = """
@@ -34,9 +41,9 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 
 # Display Image
-st.image("media/cheapBuy_Banner.gif")
 
-st.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
+st.sidebar.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
+#st.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
 url = st.text_input('Enter the product website link')
 
 
@@ -115,15 +122,11 @@ if url:
 
         for s,u,p in zip(site,url,price):
             if p == min(price):
-                if st.button('👉    '+s+'    👈'):
-                    #webbrowser.open_new_tab(u)
+                if st.button('👉'+s+'👈'):
                     webbrowser.open(u)
             else:
                 if st.button(s):
-                    #webbrowser.open_new_tab(u)
                     webbrowser.open(u)
-            
-    #            link_button(site[minimum_i], url[minimum_i])
 
     elif not description or not url or not price or not site:
         st.error('Sorry, there is no product on your selected options.')
@@ -162,7 +165,7 @@ text-align: center;
 <p>Contributors: 
 <a href="https://github.com/Mahaoqu" target="_blank">Haoqu</a>, 
 <a href="https://github.com/joshlin5" target="_blank">Joshua</a>, 
-<a href="https://github.com/zhijin44 target="_blank">Zhijin</a>, 
+<a href="https://github.com/zhijin44" target="_blank">Zhijin</a>, 
 <a href="https://github.com/SamuelVivivi" target="_blank">Guanyu</a>, 
 <a href="https://github.com/freakleesin" target="_blank">Rundi</a>
 </div>
