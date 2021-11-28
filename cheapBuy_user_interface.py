@@ -65,7 +65,6 @@ price_min, price_max = price_filter(price_range)
 if url:
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper()
-    print(results)
 
     # Use st.columns based on return values
     description, url, price, site = [], [], [], []

@@ -81,6 +81,7 @@ class WebScrapper_Bestbuy(Thread):
                 #Assign the site as bestbuy to result
                 self.result['site'] = 'bestbuy'
                 """
+
                 item=results[0]
                 atag = item.find("a",{"class":"sku-header"})
                 self.result['description'] = atag.text
@@ -141,5 +142,5 @@ class WebScrapper_Bestbuy(Thread):
         except:
             results = []
 
-        print("this is result:" + results + "yes!")
+
         return results
