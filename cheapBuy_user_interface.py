@@ -14,7 +14,7 @@ from source.web_scrappers.WebScrapper import WebScrapper
 import pandas as pd
 import webbrowser
 
-title = '<p style="font-family:Bradley Hand, cursive; color:Blue; font-size: 52px;">cheapBuy</p>'
+title = '<p style="font-family:Bradley Hand, cursive; color:Blue; font-size: 157px;">cheapBuy</p>'
 #st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
 #st.image("media/saveMoney2.gif")
@@ -25,8 +25,9 @@ st.sidebar.image("media/saveMoney2.gif")
 st.sidebar.title("Customize Options Here:")
 sites = st.sidebar.selectbox("Select the website:", ("All Sites", "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
 
-price_range = st.sidebar.selectbox("Select the price range:", ("search all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
-st.header("Search Product in " + sites)
+price_range = st.sidebar.selectbox("Select the price range:", ("all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
+st.header("Website: " + sites.capitalize() + '| |' + "Price Range: " + price_range)
+#st.header("Price Range: " + price_range)
 
 
 if url_sidebar: webbrowser.open(url_sidebar)
