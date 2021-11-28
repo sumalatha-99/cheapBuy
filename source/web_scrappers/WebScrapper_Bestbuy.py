@@ -5,29 +5,29 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
-#Import libraries
-from bs4 import BeautifulSoup
-from threading import Thread
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from source.utils.url_shortener import shorten_url
 
-#Set working directory path
 import sys
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from source.utils.url_shortener import shorten_url
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Set working directory path
 sys.path.append('../')
 
 
-class WebScrapper_Bestbuy(Thread):
+class WebScrapper_Bestbuy:
     """
     Main class used to scrape results from Bestbuy
-    
+
     ...
 
     Attributes
     ----------
     description : str
         description of the product
-        
+
     Methods
     -------
     run:
@@ -39,28 +39,27 @@ class WebScrapper_Bestbuy(Thread):
     scrap_bestbuy:
         Returns Scraped result
     """
-    
-    def __init__(self,description):
+
+    def __init__(self, description):
         """
         Parameters
         ----------
         description : str
             description of the product
         """
-        #Initialize class variables
-        self.driver = self.get_driver()
+        # Initialize class variables
         self.description = description
         self.result = {}
-        super(WebScrapper_Bestbuy,self).__init__()
-    
+
     def run(self):
         """ 
         Returns final result
         """
+        self.driver = self.get_driver()
         try:
-            #Get results from scrapping function
+            # Get results from scrapping function
             results = self.scrap_bestbuy()
-            #Condition to check whether results are avialable or not
+            # Condition to check whether results are avialable or not
             if len(results) == 0:
                 print('Bestbuy_results empty')
                 self.result = {}
@@ -82,14 +81,14 @@ class WebScrapper_Bestbuy(Thread):
                 self.result['site'] = 'bestbuy'
                 """
 
-                item=results[0]
-                atag = item.find("a",{"class":"sku-header"})
+                item = results[0]
+                atag = item.find("a", {"class": "sku-header"})
                 self.result['description'] = atag.text
                 self.result['url'] = atag.get('href')
                 self.result['url'] = shorten_url(self.result['url'])
-                self.result['price'] = item.find("div", class_="priceView-hero-price priceView-customer-price").text.strip()
+                self.result['price'] = item.find(
+                    "div", class_="priceView-hero-price priceView-customer-price").text.strip()
                 self.result['site'] = 'bestbuy'
-
 
                 """
                 for item in results:
@@ -102,26 +101,28 @@ class WebScrapper_Bestbuy(Thread):
                 """
         except Exception as e:
             print('Bestbuy_results exception', e)
-            self.result={}
+            self.result = {}
+        return self.result
 
     def get_driver(self):
         """ 
         Returns Chrome Driver
         """
-        #Prepare driver for scrapping
+        # Prepare driver for scrapping
         options = webdriver.ChromeOptions()
         options.headless = True
-        driver = webdriver.Chrome(options=options, executable_path=ChromeDriverManager().install())
+        driver = webdriver.Chrome(
+            options=options, executable_path=ChromeDriverManager().install())
         return driver
-    
+
     def get_url_bestbuy(self):
         """ 
         Returns bestbuy URL
         """
         try:
-            #Prepare URL for given description
+            # Prepare URL for given description
             template = 'https://www.bestbuy.com/site/searchpage.jsp?st={}&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
-            search_term = self.description.replace(' ','+')
+            search_term = self.description.replace(' ', '+')
             template = template.format(search_term)
         except:
             template = ''
@@ -131,16 +132,15 @@ class WebScrapper_Bestbuy(Thread):
         """ 
         Returns Scraped result
         """
-        results=[]
+        results = []
         try:
-            #Call the function to get URL
+            # Call the function to get URL
             url = self.get_url_bestbuy()
             self.driver.get(url)
-            #Use BeautifulSoup to scrap the webpage
+            # Use BeautifulSoup to scrap the webpage
             soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-            results = soup.find_all('div',{'class':'sku-item'})
+            results = soup.find_all('div', {'class': 'sku-item'})
         except:
             results = []
-
 
         return results

@@ -10,6 +10,7 @@ from pyshorteners import Shortener
 
 def shorten_url(url):
     # Shorten the passed url
-    s = Shortener()
-    short_url = s.tinyurl.short(url)
-    return short_url
+    # s = Shortener()
+    # short_url = s.tinyurl.short(url)
+    # return short_url
+    return url # why we need a short rul?
