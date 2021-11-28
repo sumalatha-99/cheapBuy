@@ -87,7 +87,7 @@ class WebScrapper:
         """
         #Get description from incoming URL
         product_description = self.get_description()
-        print(product_description)
+        #print(product_description)
         
         #Initialize thread for amazon scrapper
         t_amazon = WebScrapper_Amazon(product_description)

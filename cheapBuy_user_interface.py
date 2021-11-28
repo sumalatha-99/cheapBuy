@@ -65,11 +65,15 @@ if url:
     if sites == "All Sites":
         for result in results:
             # add results that only fit to selected price range :
-            if result!={} and (price_min <= float(result['price'][1:]) <= price_max):
-                description.append(result['description'])
-                url.append(result['url'])
-                price.append(float(result['price'].strip('$').rstrip('0')))
-                site.append(result['site'])
+            if result: 
+                try:
+                    if price_min <= float(result['price'][1:]) <= price_max:
+                        description.append(result['description'])
+                        url.append(result['url'])
+                        price.append(float(result['price'].strip('$').rstrip('0')))
+                        site.append(result['site'])
+                except Exception as e:
+                    print(e)
 
     else:
         #if sites not in site: 
@@ -78,13 +82,17 @@ if url:
         #else:
         for result in results:
             # add results that only fit to selected price range :
-            if result != {} and (price_min <= float(result['price'][1:]) <= price_max):
+            if result:
+                try:
+                    if price_min <= float(result['price'][1:]) <= price_max:
                 #print(result['site'])
-                if result['site'].strip() == sites:
-                    description.append(result['description'])
-                    url.append(result['url'])
-                    price.append(float(result['price'].strip('$').rstrip('0')))
-                    site.append(result['site'])
+                        if result['site'].strip() == sites:
+                            description.append(result['description'])
+                            url.append(result['url'])
+                            price.append(float(result['price'].strip('$').rstrip('0')))
+                            site.append(result['site'])
+                except Exception as e:
+                    print(e)
     
     
     if len(price):
@@ -107,11 +115,13 @@ if url:
 
         for s,u,p in zip(site,url,price):
             if p == min(price):
-                if st.button(s+'  (Lowest)'):
-                    webbrowser.open_new_tab(u)
+                if st.button('👉    '+s+'    👈'):
+                    #webbrowser.open_new_tab(u)
+                    webbrowser.open(u)
             else:
                 if st.button(s):
-                    webbrowser.open_new_tab(u)
+                    #webbrowser.open_new_tab(u)
+                    webbrowser.open(u)
             
     #            link_button(site[minimum_i], url[minimum_i])
 
