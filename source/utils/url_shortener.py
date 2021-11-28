@@ -6,11 +6,12 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 """
 
 # Import Libraries
-from pyshorteners import Shortener 
+from pyshorteners import Shortener
+
 
 def shorten_url(url):
     # Shorten the passed url
     # s = Shortener()
     # short_url = s.tinyurl.short(url)
     # return short_url
-    return url # why we need a short rul?
+    return url  # why we need a short rul?

@@ -26,22 +26,22 @@ setup(name='cheapBuy',
               __init__.py
         """,
       classifiers=[
-            "License :: MIT License",
-            "Programming Language :: Python",
-            "Development Status :: Initial",
-            "Intended Audience :: Developers",
-            "Topic :: Software Engineering",
-        ],
+          "License :: MIT License",
+          "Programming Language :: Python",
+          "Development Status :: Initial",
+          "Intended Audience :: Developers",
+          "Topic :: Software Engineering",
+      ],
       keywords='python requirements license gitignore',
       license='MIT',
       install_requires=[
-            'BeautifulSoup',
-            'pytest',
-            'Flask',
-            'selenium',
-            'streamlit',
-            'webdriver_manager',
-            'pyshorteners',
-            'link-button'
-        ],
-     )
+          'BeautifulSoup',
+          'pytest',
+          'Flask',
+          'selenium',
+          'streamlit',
+          'webdriver_manager',
+          'pyshorteners',
+          'link-button'
+      ],
+      )

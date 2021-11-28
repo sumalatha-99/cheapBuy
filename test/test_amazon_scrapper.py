@@ -5,12 +5,13 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
+from source.web_scrappers.WebScrapper_Amazon import WebScrapper_Amazon
 import sys
 sys.path.append('../')
-from source.web_scrappers.WebScrapper_Amazon import WebScrapper_Amazon
+
 
 def test_amazon_scrapper():
-    
+
     description = 'Brita 35503 Standard Replacement Filters'
     t = WebScrapper_Amazon(description)
     t.start()
