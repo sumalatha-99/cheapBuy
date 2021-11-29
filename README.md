@@ -35,7 +35,7 @@
 <a href="https://img.shields.io/github/repo-size/anshulp2912/cheapBuy" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/anshulp2912/cheapBuy" /></a>
 
-![Lines of code](https://img.shields.io/tokei/lines/github/anshulp2912/cheapBuy)
+![Lines of code](https://img.shields.io/tokei/lines/github/freakleesin/cheapBuy)
 
 
 <p align="center">
@@ -49,7 +49,9 @@
  <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
 </h1>
 
-[Watch the demo here](https://github.com/anshulp2912/cheapBuy/blob/main/media/streamlit-cheapBuy_user_interface-Colgate_Walmart.webm)
+## Click for new video
+
+[![Team Formation Assistant Project 2 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
 
 
 <h1 align="center">
@@ -130,23 +132,27 @@ streamlit run cheapBuy_user_interface.py
 8. Web Scrapping various product details from BJs.
 9. Improve code execution speed using multithreading.
 
-
-### PHASE-3 ⌛ <a name="Phase3"></a>
-1. Fetching descirption of the user's current tab for Target.
+### PHASE-3 ✅ <a name="Phase3"></a>
+1. Fetching descirption of the user's current tab for Bestbuy.
 2. Fetching descirption of the user's current tab for Trader Joes.
 3. Fetching descirption of the user's current tab for Kroger.
-4. Web Scrapping various product details from Target.
+4. Web Scrapping various product details from Bestbuy.
 5. Web Scrapping various product details from Trader Joes.
 6. Web Scrapping various product details from Kroger.
-7. Automatic deployment of server using Teraform or ansible.
-8. Improve code execution speed using multiprocessing.
-9. Improve website UI.
-10. Add a badge on the user's current tab.
-11. Dashboard including how many user's click on the website.
-12. Email notification of the available coupon to the user.
-13. Alternate product suggestion feature.
-14. Show a available coupon on other shopping website.
+7. Improve code execution speed using multiprocessing.
+8. Improve website UI.
+9. Add sidebar.
+10. Users can choose the selected website and price range.
+11. Improve the accuracy of searching products.
+12. Link buttons for all websites.
 
+### PHASE-4 ⌛ <a name="Phase3"></a>
+1. Automatic deployment of server using Teraform or ansible.
+2. Dashboard including how many user's click on the website.
+3. Email notification of the available coupon to the user.
+4. Alternate product suggestion feature.
+5. Show a available coupon on other shopping website.
+6. Add more websites webScrapping .
 
 🌟 You are all set! 🌟
 
