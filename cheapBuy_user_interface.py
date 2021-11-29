@@ -24,7 +24,7 @@ url_sidebar = st.sidebar.text_input('Quick Action: Open a new page')
 st.sidebar.image("media/saveMoney2.gif")
 st.sidebar.title("Customize Options Here:")
 sites = st.sidebar.selectbox("Select the website:", ("All Sites",
-                             "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy"))
+                             "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy", "traderjoes"))
 
 price_range = st.sidebar.selectbox("Select the price range:", (
     "all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))

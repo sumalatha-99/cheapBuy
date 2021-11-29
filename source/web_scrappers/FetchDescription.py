@@ -78,6 +78,24 @@ class FetchDescription():
             description = ''
         return description
 
+    def fetch_desc_traderjoes(self):
+        """ 
+        Fetch description from Trader Joes
+        """
+        description = ''
+        try:
+            # Extract description from URL for bjs
+            link = self.product_link.replace("https://www.traderjoes.com/home", "")
+            for ch in link:
+                if ch != '/':
+                    description += ch
+                else:
+                    break
+            description = description.replace('-', ' ')
+        except:
+            description = ''
+        return description
+
     def fetch_desc_ebay(self):
         """
         Fetch description from Ebay
@@ -158,3 +176,5 @@ class FetchDescription():
         except:
             description = ''
         return description
+    
+    
