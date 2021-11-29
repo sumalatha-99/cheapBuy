@@ -1,40 +1,39 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5645496.svg)](https://doi.org/10.5281/zenodo.5645496)
-[![codecov](https://codecov.io/gh/anshulp2912/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
-[![Build Status](https://app.travis-ci.com/anshulp2912/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
-[![Python Style Checker](https://github.com/anshulp2912/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/style_checker.yml)
-[![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml)
-[![Lint Python](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml)
-[![Close as a feature](https://github.com/anshulp2912/cheapBuy/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/close_as_a_feature.yml)
+[![codecov](https://codecov.io/gh/freakleesin/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
+[![Build Status](https://app.travis-ci.com/freakleesin/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
+[![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
+[![Run Tests On Push](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
+[![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
+[![Running Code Coverage](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml)
+[![Close as a feature](https://github.com/freakleesin/cheapBuy/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/close_as_a_feature.yml)
 
 <!--Badges-->
 <a href="https://github.com/anshulp2912/cheapBuy/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy license" />
+<img src="https://img.shields.io/github/license/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy license" />
     
 </a>
 <a href="https://github.com/anshulp2912/cheapBuy/fork" target="blank">
-<img src="https://img.shields.io/github/forks/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
+<img src="https://img.shields.io/github/forks/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
 </a>
 <a href="https://github.com/anshulp2912/cheapBuy/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/anshulp2912/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
+<img src="https://img.shields.io/github/stars/freakleesin/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
 </a>
 <a href="https://github.com/anshulp2912/cheapBuy/issues" target="blank">
-<img src="https://img.shields.io/github/issues/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
+<img src="https://img.shields.io/github/issues/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
 </a>
 <a href="https://github.com/anshulp2912/cheapBuy/issues" target="blank">
-<img src="https://img.shields.io/github/issues-closed/anshulp2912/cheapBuy" alt="cheapBuy issues closed"/>
+<img src="https://img.shields.io/github/issues-closed/freakleesin/cheapBuy" alt="cheapBuy issues closed"/>
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/pulls" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/milestones" alt="milestones">
-<img src="https://img.shields.io/github/milestones/all/anshulp2912/cheapBuy" /></a> 
-<a href="https://github.com/anshulp2912/cheapBuy/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/anshulp2912/cheapBuy" /></a> 
-<a href="https://img.shields.io/github/repo-size/anshulp2912/cheapBuy" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/anshulp2912/cheapBuy" /></a>
-
+<a href="https://github.com/freakleesin/cheapBuy/milestones" alt="milestones">
+<img src="https://img.shields.io/github/milestones/all/freakleesin/cheapBuy" /></a> 
+<a href="https://github.com/freakleesin/cheapBuy/graphs/commit-activity" alt="commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/freakleesin/cheapBuy" /></a> 
+<a href="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" /></a>
 ![Lines of code](https://img.shields.io/tokei/lines/github/freakleesin/cheapBuy)
 
 
