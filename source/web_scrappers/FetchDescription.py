@@ -178,3 +178,31 @@ class FetchDescription():
         return description
     
     
+    def fetch_desc_kroger(self):
+        """ 
+        Fetch description from Kroger
+        """
+        description = ''
+        s = []
+
+        try:
+            # Extract description from URL for Kroger
+
+            link = self.product_link.replace(
+                "https://www.kroger.com/p/", "")
+            # the 1st value in the link is the description
+            link_seperation = link.split('/')
+            if link_seperation[0]:
+                _str = str(link_seperation[0])
+                des = _str.split('-')
+
+            for i, d in enumerate(des):
+                s.append(d)
+                if i != len(des)-1:
+                    s.append(' ')
+
+            description = ''.join(s)
+
+        except:
+            description = ''
+        return description

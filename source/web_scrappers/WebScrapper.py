@@ -15,7 +15,7 @@ from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
 from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
 from source.web_scrappers.WebScrapper_TraderJoes import WebScrapper_TraderJoes
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
-
+from source.web_scrappers.WebScrapper_Kroger import WebScrapper_Kroger
 
 class WebScrapper:
     """
@@ -84,6 +84,11 @@ class WebScrapper:
             fd = FetchDescription(self.product_link)
             description = fd.fetch_desc_traderjoes()
 
+        elif 'kroger' in self.product_link:
+            source = 'kroger'
+            fd = FetchDescription(self.product_link)
+            description = fd.fetch_desc_kroger()
+
         else:
             source = 'N/A'
         if source != 'N/A':
@@ -99,7 +104,7 @@ class WebScrapper:
 
         # scrapper = [WebScrapper_Bestbuy] # So slow though only bestbuy, why?
         scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
-                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_TraderJoes]
+                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_TraderJoes, WebScrapper_Kroger]
 
         t_scrapper = [s.__call__(product_description) for s in scrapper]
 
