@@ -68,7 +68,7 @@ class WebScrapper_Costco:
                 atag = item.find("span", {"class": "description"}).find('a')
                 self.result['description'] = atag.text
                 self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 self.result['price'] = item.find(
                     "div", {"class": "price"}).text.strip()
                 self.result['site'] = 'costco'
@@ -89,7 +89,7 @@ class WebScrapper_Costco:
 
     def get_url_costco(self):
         """ 
-        Returns costco URL
+        Returns costco URL of search box
         """
         template = "https://www.costco.com"+"/CatalogSearch?dept=All&keyword={}"
         search_term = self.description.replace(' ', '+')

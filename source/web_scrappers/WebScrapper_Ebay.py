@@ -72,7 +72,7 @@ class WebScrapper_Ebay:
                     "h3", {"class": "s-item__title"}).get_text().strip()
                 # Get the URL for the page and shorten item
                 self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 # Find the price of the item
                 self.result['price'] = item.find(
                     "span", {"class": "s-item__price"}).get_text().strip()
@@ -96,7 +96,7 @@ class WebScrapper_Ebay:
 
     def get_url_ebay(self):
         """ 
-        Returns ebay URL
+        Returns ebay URL of search box
         """
         try:
             # Prepare URL for given description

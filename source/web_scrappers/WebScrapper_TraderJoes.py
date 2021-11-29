@@ -47,7 +47,7 @@ class WebScrapper_TraderJoes:
                 self.result['description'] = atag.text.strip()
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.traderjoes.com/home'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 # Find the span containging price of the item
                 price_parent = item.find('span', 'a-price')
                 # Find the price of the item
@@ -73,7 +73,7 @@ class WebScrapper_TraderJoes:
 
     def get_url_traderjoes(self):
         """ 
-        Returns amazon URL
+        Returns amazon URL of search box
         """
         try:
             # Prepare URL for given description

@@ -78,7 +78,7 @@ class WebScrapper_Bjs:
                     atag.find("h2", {"class": "product-title no-select d-none"})).text
                 # Get the URL for the page and shorten item
                 self.result['url'] = "www.bjs.com" + str(atag.get('href'))
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 # Find the price of the item
                 self.result['price'] = item.find(
                     "div", {"class": "display-price"}).find('span', {'class': 'price'}).text
@@ -102,7 +102,7 @@ class WebScrapper_Bjs:
 
     def get_url_bjs(self):
         """ 
-        Returns bjs URL
+        Returns bjs URL of search box
         """
         # Prepare URL for given description
         template = "https://www.bjs.com"+"/search/{}"

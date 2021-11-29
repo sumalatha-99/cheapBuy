@@ -70,7 +70,7 @@ class WebScrapper_Kroger:
 
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.kroger.com'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
 
                 # Find the span containging price of the item
                 price_parent = item.find('div', 'flex justify-between items-center mb-8')
@@ -98,7 +98,7 @@ class WebScrapper_Kroger:
 
     def get_url_kroger(self):
         """ 
-        Returns kroger URL
+        Returns kroger URL of search box
         """
         try:
             # Prepare URL for given description

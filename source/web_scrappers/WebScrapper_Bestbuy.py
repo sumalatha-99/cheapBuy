@@ -85,7 +85,7 @@ class WebScrapper_Bestbuy:
                 atag = item.find("a", {"class": "sku-header"})
                 self.result['description'] = atag.text
                 self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 self.result['price'] = item.find(
                     "div", class_="priceView-hero-price priceView-customer-price").text.strip()
                 self.result['site'] = 'bestbuy'
@@ -117,7 +117,7 @@ class WebScrapper_Bestbuy:
 
     def get_url_bestbuy(self):
         """ 
-        Returns bestbuy URL
+        Returns bestbuy URL of search box
         """
         try:
             # Prepare URL for given description

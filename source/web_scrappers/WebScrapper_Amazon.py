@@ -69,7 +69,7 @@ class WebScrapper_Amazon:
                 self.result['description'] = atag.text.strip()
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.amazon.com'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
+                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 # Find the span containging price of the item
                 price_parent = item.find('span', 'a-price')
                 # Find the price of the item
@@ -95,7 +95,7 @@ class WebScrapper_Amazon:
 
     def get_url_amazon(self):
         """ 
-        Returns amazon URL
+        Returns amazon URL of search box
         """
         try:
             # Prepare URL for given description
