@@ -51,7 +51,7 @@
 
 ## Click for new video
 
-[![Team Formation Assistant Project 2 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
+[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
 
 
 <h1 align="center">
