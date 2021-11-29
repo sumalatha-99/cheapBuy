@@ -161,11 +161,11 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/anshulp2912"><img src="https://avatars.githubusercontent.com/u/36321866?s=400&u=829f7dc91108ae56805b2a2917b6ec63a1a0d9d0&v=4" width="75px;" alt=""/><br /><sub><b>Anshul Navinbhai Patel</b></sub></a></td>
-    <td align="center"><a href="https://github.com/AgrawalBhavya"><img src="https://avatars.githubusercontent.com/u/52067226?v=4" width="75px;" alt=""/><br /><sub><b>Bhavya Agrawal</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/darshanp228"><img src="https://avatars.githubusercontent.com/u/72122805?v=4" width="75px;" alt=""/><br /><sub><b>Darshan Manharbhai Patel</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/pragna98"><img src="https://avatars.githubusercontent.com/u/46415182?v=4" width="75px;" alt=""/><br /><sub><b>Pragna Bollam</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/rohan22shah"><img src="https://avatars.githubusercontent.com/u/42119767?v=4" width="75px;" alt=""/><br /><sub><b>Rohan Jigarbhai Shah</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/freakleesin"><img src="https://avatars.githubusercontent.com/u/44102063?v=4" width="75px;" alt=""/><br /><sub><b>Rundi Liu</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Mahaoqu"><img src="https://avatars.githubusercontent.com/u/24971537?v=4" width="75px;" alt=""/><br /><sub><b>Haoqv Ma</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/zhijin44"><img src="https://avatars.githubusercontent.com/u/89488910?v=4" width="75px;" alt=""/><br /><sub><b>Zhijin Yang</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/SamuelVivivi"><img src="https://avatars.githubusercontent.com/u/10951700?v=4" width="75px;" alt=""/><br /><sub><b>Guanyu Hou</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/joshlin5"><img src="https://avatars.githubusercontent.com/u/47061522?v=4" width="75px;" alt=""/><br /><sub><b>Joshua Lin</b></sub></a><br /></td>
   </tr>
 </table>
 
