@@ -14,7 +14,7 @@ import streamlit as st
 import sys
 sys.path.append('../')
 
-title = '<p style="font-family:Bradley Hand, cursive; color:Blue; font-size: 157px;">cheapBuy</p>'
+title = '<p style="font-family:Bradley Hand, cursive; color:#64b3f4; font-size: 157px;">cheapBuy</p>'
 # st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
 # st.image("media/saveMoney2.gif")
@@ -167,7 +167,7 @@ position: fixed;
 left: 0;
 bottom: 0%;
 width: 100%;
-background-color: #CCCCFF;
+background-color: #FBD786;
 color: black;
 text-align: center;
 }
