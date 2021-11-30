@@ -1,3 +1,5 @@
+[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
+## ⬆️ Click on the icon above to see the new video
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5645496.svg)](https://doi.org/10.5281/zenodo.5645496)
 [![codecov](https://codecov.io/gh/freakleesin/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
@@ -46,10 +48,6 @@
 <h1 align="center">
  <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
 </h1>
-
-## ⬇️ Click on the icon below to see the new video ⬇️
-
-[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
 
 
 <h1 align="center">
