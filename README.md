@@ -1,12 +1,11 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5645496.svg)](https://doi.org/10.5281/zenodo.5645496)
-[![codecov](https://codecov.io/gh/anshulp2912/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
-[![Build Status](https://app.travis-ci.com/anshulp2912/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
-[![Python Style Checker](https://github.com/anshulp2912/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/style_checker.yml)
-[![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml)
-[![Lint Python](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml)
-[![Close as a feature](https://github.com/anshulp2912/cheapBuy/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/close_as_a_feature.yml)
+[![codecov](https://codecov.io/gh/freakleesin/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
+[![Build Status](https://app.travis-ci.com/freakleesin/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
+[![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
+[![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
+[![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
+[![Running Code Coverage](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml)
 
 <!--Badges-->
 <a href="https://github.com/anshulp2912/cheapBuy/blob/main/LICENSE" target="blank">
@@ -35,7 +34,6 @@
 <a href="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" /></a>
 
-![Lines of code](https://img.shields.io/tokei/lines/github/freakleesin/cheapBuy)
 
 
 <p align="center">
@@ -49,7 +47,7 @@
  <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
 </h1>
 
-## Click for new video
+## ⬇️ Click on the icon below to see the new video ⬇️
 
 [![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=PVHti3F3GRw)
 
