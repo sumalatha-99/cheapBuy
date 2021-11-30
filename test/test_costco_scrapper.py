@@ -14,6 +14,5 @@ def test_costco_scrapper():
 
     description = 'brita replacement filters%2c 10 pack'
     t = WebScrapper_Costco(description)
-    t.start()
-    t.join()
+
     assert t.result is not None

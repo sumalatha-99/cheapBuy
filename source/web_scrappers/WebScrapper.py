@@ -102,7 +102,7 @@ class WebScrapper:
         product_description = self.get_description()
         # print(product_description)
 
-        # scrapper = [WebScrapper_Bestbuy] # So slow though only bestbuy, why?
+        #scrapper = [WebScrapper_Bestbuy] # So slow though only bestbuy, why?
         scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
                     WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_TraderJoes, WebScrapper_Kroger]
 

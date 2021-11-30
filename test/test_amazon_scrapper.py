@@ -14,6 +14,5 @@ def test_amazon_scrapper():
 
     description = 'Brita 35503 Standard Replacement Filters'
     t = WebScrapper_Amazon(description)
-    t.start()
-    t.join()
+
     assert t.result is not None

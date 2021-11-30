@@ -14,8 +14,7 @@ def test_ebay_scrapper():
 
     description = '3x Brita Longlast Water Filter Replacement  - NEW Sealed'
     t = WebScrapper_Ebay(description)
-    t.start()
-    t.join()
+    
     assert t.result == {'description': '3x Brita Longlast Water Filter Replacement  - NEW Sealed',
                         'url': 'https://tinyurl.com/yg7pognr',
                         'price': '$20.00',
