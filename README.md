@@ -5,23 +5,23 @@
 [![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml)
+[![Running Code Coverage](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml)
 
 <!--Badges-->
-<a href="https://github.com/anshulp2912/cheapBuy/blob/main/LICENSE" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy license" />
     
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/fork" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/fork" target="blank">
 <img src="https://img.shields.io/github/forks/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/stargazers" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/freakleesin/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/issues" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/issues" target="blank">
 <img src="https://img.shields.io/github/issues/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
 </a>
-<a href="https://github.com/anshulp2912/cheapBuy/issues" target="blank">
+<a href="https://github.com/freakleesin/cheapBuy/issues" target="blank">
 <img src="https://img.shields.io/github/issues-closed/freakleesin/cheapBuy" alt="cheapBuy issues closed"/>
 </a>
 <a href="https://github.com/freakleesin/cheapBuy/pulls" target="blank">
