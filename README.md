@@ -1,13 +1,17 @@
 [![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=-P3LxID5QzA)
 ## ⬆️ Click on the icon above to see the new video
 
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5645496.svg)](https://doi.org/10.5281/zenodo.5645496)
-[![codecov](https://codecov.io/gh/freakleesin/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
-[![Build Status](https://app.travis-ci.com/freakleesin/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
+[![codecov](https://codecov.io/gh/anshulp2912/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
+[![Build Status](https://app.travis-ci.com/anshulp2912/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
 [![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml)
+[![Running Code Coverage](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml)
+
+
 
 <!--Badges-->
 <a href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="blank">
@@ -178,8 +182,3 @@ We would also like to extend our gratitude to previous group : https://github.co
 - [https://shields.io/](https://shields.io/)
 - [https://www.powtoon.com/](https://www.powtoon.com/)
 <br>
-
-
-
-
-
