@@ -26,12 +26,12 @@ st.sidebar.title("Customize Options Here:")
 sites = st.sidebar.selectbox("Select the website:", ("All Sites",
                              "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy", "traderjoes", "kroger"))
 
-price_range = st.sidebar.selectbox("Select the price range:", (
-    "all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
-st.header("Website: " + sites.capitalize() +
-          '| |' + "Price Range: " + price_range)
+#price_range = st.sidebar.selectbox("Select the price range:", (
+ #   "all", "Under $50", "[$50, $100)", "[$100, $150)", "[$150, $200)", "$200 & Above"))
+#st.header("Website: " + sites.capitalize() +
+ #         '| |' + "Price Range: " + price_range)
 #st.header("Price Range: " + price_range)
-
+price_range = "all"
 
 if url_sidebar:
     webbrowser.open(url_sidebar)
@@ -70,6 +70,7 @@ def price_filter(price_range):
 
 
 price_min, price_max = price_filter(price_range)
+
 
 # Pass url to method
 if url:
@@ -167,7 +168,7 @@ position: fixed;
 left: 0;
 bottom: 0%;
 width: 100%;
-background-color: #FBD786;
+background-color: #47276b;
 color: black;
 text-align: center;
 }
@@ -176,9 +177,9 @@ text-align: center;
 <p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">Developed with ❤ by cheapBuy</a></p>
 <p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
 <p>Contributors: 
+<a href="https://github.com/EZ7051" target="_blank">Ejaz</a>,
 <a href="https://github.com/soubhagya31" target="_blank">Soubhagya</a>, 
 <a href="https://github.com/sumalatha-99" target="_blank">Suma</a>, 
-<a href="https://github.com/EZ7051" target="_blank">Ejaz</a>, 
 <a href="https://github.com/shyni0201" target="_blank">Shynitha</a>
 </div>
 """
