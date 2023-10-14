@@ -6,7 +6,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 """
 
 # Import Libraries
-from pyshorteners import Shortener
+#from pyshorteners import Shortener
 
 
 def shorten_url(url):
