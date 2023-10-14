@@ -52,45 +52,66 @@ class WebScrapper:
         """
         Fetch description for all websites
         """
-        # Check the incoming URL for the website and call function to extract description accordingly
-        if 'walmart' in self.product_link:
-            source = 'walmart'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_walmart()
-        elif 'amazon' in self.product_link:
-            source = 'amazon'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_amazon()
-        elif 'ebay' in self.product_link:
-            source = 'ebay'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_ebay()
-        elif 'costco' in self.product_link:
-            source = 'costco'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_costco()
-        elif 'bjs' in self.product_link:
-            source = 'bjs'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_bjs()
+        # # Check the incoming URL for the website and call function to extract description accordingly
+        # if 'walmart' in self.product_link:
+        #     source = 'walmart'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_walmart()
+        # elif 'amazon' in self.product_link:
+        #     source = 'amazon'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_amazon()
+        # elif 'ebay' in self.product_link:
+        #     source = 'ebay'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_ebay()
+        # elif 'costco' in self.product_link:
+        #     source = 'costco'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_costco()
+        # elif 'bjs' in self.product_link:
+        #     source = 'bjs'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_bjs()
+        #
+        # elif 'bestbuy' in self.product_link:
+        #     source = 'bestbuy'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_bestbuy()
+        #
+        # elif 'traderjoes' in self.product_link:
+        #     source = 'traderjoes'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_traderjoes()
+        #
+        # elif 'kroger' in self.product_link:
+        #     source = 'kroger'
+        #     fd = FetchDescription(self.product_link)
+        #     description = fd.fetch_desc_kroger()
+        #
+        # else:
+        #     source = 'N/A'
+        # if source != 'N/A':
+        #     return description
+        website_configs = {
+            'walmart': 'fetch_desc_walmart',
+            'amazon': 'fetch_desc_amazon',
+            'ebay': 'fetch_desc_ebay',
+            'costco': 'fetch_desc_costco',
+            'bjs': 'fetch_desc_bjs',
+            'bestbuy': 'fetch_desc_bestbuy',
+            'traderjoes': 'fetch_desc_traderjoes',
+            'kroger': 'fetch_desc_kroger'
+        }
 
-        elif 'bestbuy' in self.product_link:
-            source = 'bestbuy'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_bestbuy()
+        source = 'N/A'
+        for website, scraper_method in website_configs.items():
+            if website in self.product_link:
+                source = website
+                fd = FetchDescription(self.product_link)
+                description = getattr(fd, scraper_method)()
+                break
 
-        elif 'traderjoes' in self.product_link:
-            source = 'traderjoes'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_traderjoes()
-
-        elif 'kroger' in self.product_link:
-            source = 'kroger'
-            fd = FetchDescription(self.product_link)
-            description = fd.fetch_desc_kroger()
-
-        else:
-            source = 'N/A'
         if source != 'N/A':
             return description
 
