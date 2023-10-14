@@ -176,11 +176,10 @@ text-align: center;
 <p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">Developed with ❤ by cheapBuy</a></p>
 <p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
 <p>Contributors: 
-<a href="https://github.com/Mahaoqu" target="_blank">Haoqu</a>, 
-<a href="https://github.com/joshlin5" target="_blank">Joshua</a>, 
-<a href="https://github.com/zhijin44" target="_blank">Zhijin</a>, 
-<a href="https://github.com/SamuelVivivi" target="_blank">Guanyu</a>, 
-<a href="https://github.com/freakleesin" target="_blank">Rundi</a>
+<a href="https://github.com/soubhagya31" target="_blank">Soubhagya</a>, 
+<a href="https://github.com/sumalatha-99" target="_blank">Suma</a>, 
+<a href="https://github.com/EZ7051" target="_blank">Ejaz</a>, 
+<a href="https://github.com/shyni0201" target="_blank">Shynitha</a>
 </div>
 """
 
